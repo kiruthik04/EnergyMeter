@@ -1,0 +1,45 @@
+body, html{
+    height: 100%;   
+  }
+.bg-image {
+    background-image: url("bg.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+* {
+    box-sizing: border-box;
+}
+
+img{
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+.black{
+    background-color: black;
+    width: 1500px;
+    height: 50px;
+    position: fixed;
+    margin: 0%;    
+}
+.ev{
+    position: relative;
+    bottom: 750px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 700px;
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-top: 80px;
+    font-size: 3em;
+}
+.date-time{
+    float: right;
+    position: relative;
+    bottom: 1480px;
+    color: white;
+    padding-right: 10px;
+}

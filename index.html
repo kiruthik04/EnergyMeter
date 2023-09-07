@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webstyle.css"></a>
+    
+</head>
+<header>
+        <div class="black">
+            <img src="photo.png">
+        </div>
+</header>
+<body>
+   
+    <div class="bg-image"></div>
+    <h1 class="ev">EV CHARGING STATION</h1>
+    <div class="date-time">
+        <h3 id="date"></h3>
+        <h3 id="time"></h3>
+    </div>
+
+    <script>
+            function updateDateTime() {
+            const currentDate = new Date();
+            const dateElement = document.getElementById("date");
+            const timeElement = document.getElementById("time");
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
+            timeElement.textContent = currentDate.toLocaleTimeString();
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+    <div class="body">
+    <div id="unit">
+        <a href="unit.html" class="a" ><h2> RECHARGE <br> PER UNIT</h2></a>
+    </div>
+    <div id="amount">
+        <a href="amount.html" class="a"><h2> RECHARGE <br> BY AMOUNT</h2></a>
+    </div>
+</div>
+<footer>
+    <p id="copy">&copy Rights to Optimus ltd</p>
+</footer>
+</body>
+</html>
