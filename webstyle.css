@@ -51,3 +51,28 @@ img{
     justify-content: center;
     color: #ffffff;
 }
+#unit{
+    position: relative;
+    left: 500px;
+    bottom: 1200px;
+    border: #ffffff;
+    height: 100px;
+    width: 200px;
+    background-color: azure;
+    text-align: center;
+}
+#amount{
+    position: relative;
+    left: 800px;
+    bottom: 1320px;
+    border: #ffffff;
+    height: 100px;
+    width: 200px;
+    background-color: azure;
+    text-align: center;
+
+}
+.a{
+    text-decoration: none;
+    
+}
