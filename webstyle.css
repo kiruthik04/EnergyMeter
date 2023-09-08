@@ -2,7 +2,7 @@ body, html{
     height: 100%;   
   }
 .bg-image {
-    background-image: url("");
+    background-image: url("bg.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@ img{
 .black{
     background-color: black;
     width: 1500px;
-    height: 52px;
+    height: 50px;
     position: fixed;
     margin: 0%;    
 }
