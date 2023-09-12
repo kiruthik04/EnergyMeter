@@ -14,25 +14,27 @@
 </header>
 <body>
    
-    <div class="bg-image"></div>
-    <h1 class="ev">EV CHARGING STATION</h1>
-    <div class="date-time">
-        <h3 id="date"></h3>
-        <h3 id="time"></h3>
-    </div>
-
-
-    <div class="body">
-    <div id="unit">
-        <a href="unit.html" class="a" ><h2> RECHARGE <br> PER UNIT</h2></a>
-    </div>
-    <div id="amount">
-        <a href="amount.html" class="a"><h2> RECHARGE <br> BY AMOUNT</h2></a>
-    </div>
-</div>
-<footer>
-    <p id="copy">&copy Rights to Team Optimus ltd</p>
-</footer>
+    <nav>
+        <img src="photo.png" alt="" height="30px" width="150px" style="margin-top: 15px;">
+       </nav>
+      <div class="container">
+      <div class="head"><h1 class="ev" style="text-align: center;margin-top: 90px;">EV CHARGING<br>STATION</h1></div> 
+      <div class="right" style="margin-top: auto;">
+      <div class="date-time">
+           <h3 id="date"></h3>
+           <h3 id="time"></h3>
+       </div>
+       <div id="unit">
+          <input type="text" id="input" placeholder="Enter your amount" style="width: 80%;height: 60px; padding: 5px;border-radius: 10px;outline: none;margin-top: 30px;">
+       </div>
+       <div id="amount">
+           <button onclick="unit()" type="button" style="width: 50%;height: 60px; padding: 5px;border-radius: 10px;outline: none;margin-top: 40px; margin-left: 20%;"><b>RECHARGE<br>NOW</b></button>
+       </div>
+   </div>
+   </div>
+   <footer>
+       <p id="copy">&copy Rights to Optimus</p>
+   </footer>
 <script src="main.js"></script>
 </body>
 </html>
