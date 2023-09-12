@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Energy Meter Dashboard</title>
-    <link rel="stylesheet" href="webstyle.css">
-    <link href="./photo.png" rel="shortcut icon" type="image/png">
-
-</head> 
-<body>
-   
+    <link rel="stylesheet" href="webstyle.css" />
+    <link href="./photo.png" rel="shortcut icon" type="image/png" />
+  </head>
+  <body>
     <nav>
-        <img src="photo.png" alt="" height="30px" width="150px" style="margin-top: 15px;">
-       </nav>
-      <div class="container">
-      <div class="head"><h1 class="ev" style="text-align: center;margin-top: 90px;">EV CHARGING<br>STATION</h1></div> 
-      <div class="right" style="margin-top: auto;">
-      <div class="date-time">
-           <h3 id="date"></h3>
-           <h3 id="time"></h3>
-       </div>
-       <div id="unit">
-          <input type="text" id="input" placeholder="Enter your amount" style=" font-family: Poppins; width: 80%;height: 60px; padding: 5px;border-radius: 10px;outline: none;margin-top: 30px;">
-       </div>
-       <div id="amount">
-           <button onclick="unit()" type="button" style="width: 50%;height: 60px; padding: 5px;border-radius: 10px;outline: none;margin-top: 40px; margin-left: 20%;"><b>RECHARGE<br>NOW</b></button>
-       </div>
-   </div>
-   </div>
-   <footer>
-       <p id="copy">&copy Made by Team Optimus</p>
-   </footer>
-<script src="main.js"></script>
-</body>
+      <img
+        src="photo.png"
+        alt=""
+        height="30px"
+        width="150px"
+        style="margin-top: 15px"
+      />
+    </nav>
+    <div class="container">
+      <div class="head">
+        <h1 class="ev" style="text-align: center; margin-top: 90px">
+          EV CHARGING<br />STATION
+        </h1>
+      </div>
+      <div class="right" style="margin-top: auto">
+        <div class="date-time">
+          <h3 id="date"></h3>
+          <h3 id="time"></h3>
+        </div>
+        <div id="unit">
+          <input
+            type="text"
+            id="input"
+            placeholder="Enter your amount"
+            style="
+              font-family: Poppins;
+              width: 80%;
+              height: 60px;
+              padding: 5px;
+              border-radius: 10px;
+              outline: none;
+              margin-top: 30px;
+            "
+          />
+        </div>
+        <div id="amount">
+          <button
+            onclick="unit()"
+            type="button"
+            style="
+              font-family: Poppins;
+              width: 50%;
+              height: 60px;
+              padding: 5px;
+              border-radius: 10px;
+              outline: none;
+              margin-top: 40px;
+              margin-left: 20%;
+            "
+          >
+            <b>RECHARGE<br />NOW</b>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p id="copy">&copy Made by Team Optimus</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>
