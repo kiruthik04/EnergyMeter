@@ -63,11 +63,11 @@
       }
       .amount{
         position: relative;
-        left: 800px;
-        bottom: 1350px;
-        width: 200px;
-        height: 100px;
-        text-align: center;
+        padding: 5px;
+        
+        outline: none;
+        margin-top: 40px; 
+        margin-left:20%;
       }
     button{
         background-color: #fff;
