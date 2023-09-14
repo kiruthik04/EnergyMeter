@@ -8,6 +8,7 @@
             font-family: 'poppins',sans-serif;
             margin: 0%;
             padding: 0%;
+            height: auto;
         }
         nav{
             height: 70px;
@@ -32,7 +33,7 @@
             background-color: green;text-align: center;
             color: antiquewhite;
             font-size: 1rem;
-            margin-top: 60px;
+            margin-top: 75px;
             display: flex;
             justify-content: center;
             align-items: end;
