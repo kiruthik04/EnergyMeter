@@ -62,8 +62,12 @@
         color: #fff;
       }
       .amount{
-        width: 30%;
-        height: 100%;
+        position: relative;
+        left: 800px;
+        bottom: 1350px;
+        width: 200px;
+        height: 100px;
+        text-align: center;
       }
     button{
         background-color: #fff;
