@@ -55,21 +55,20 @@
         }
         .right{
             flex-direction: column;
-           justify-content: right;
-          margin-left: 25%;
-          margin-top: 5%;
+            justify-content: right;
+            margin-left: 25%;
+            margin-top: 5%;
         }
-      .date-time{
-        color: #fff;
-      }
-      .amount{
-        position: relative;
-        padding: 5px;
-        
-        outline: none;
-        margin-top: 40px; 
-        margin-left:20%;
-      }
-    button{
-        background-color: #fff;
-    }
+        .date-time{
+            color: #fff;
+        }
+        .amount{
+            position: relative;
+            padding: 5px;
+            outline: none;
+            margin-top: 40px; 
+            margin-left:20%;
+        }
+        button{
+            background-color: #fff;
+        }
