@@ -28,18 +28,7 @@
             padding: 0%;overflow: hidden;
             display: flex;
         }
-        footer{
-            height: 50px;
-            background-color: green;text-align: center;
-            color: antiquewhite;
-            font-size: 1rem;
-            margin-top: 75px;
-            display: flex;
-            justify-content: center;
-            align-items: end;
-            text-align: center;
-            float: bottom;
-        }
+        
         h1{
             display: flex;
             justify-content: center;
