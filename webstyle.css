@@ -251,7 +251,7 @@
         }
         #container4{
             background-color: black;
-            height: 180px;
+            height: 220px;
             display: flex;
             color: white;
         }
@@ -269,5 +269,8 @@
             position: absolute;
             top: 1050px;
             font-family: 'Vollkorn',sans-serif;
+        }
+        #phone{
+           display: flex;
         }
         
