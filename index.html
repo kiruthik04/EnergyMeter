@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Energy Meter Dashboard</title>
     <link rel="stylesheet" href="webstyle.css" />
     <link href="./icon.png" rel="shortcut icon" type="image/png" />
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     
@@ -22,16 +23,16 @@
       />
     </nav>
     <div class="head">
-    <div class="topnav">
-      <h1  style=" color: white; font-size: 1.6em;">
-        <b><span style="font-size:1.7em ;">EV</span> Charing Station</b>
-       </h1>
-<a href="index.html">Home</a>
-<a href="#container2">EV Cars</a>
-<a href="#chart">Chart</a>
-<a href="#container4">Contacts</a>
-    </div>
-    </div>
+      <div class="topnav">
+        <h1  style=" color: white; font-size: 1.6em;">
+          <b><span style="font-size:1.7em ;">EV</span> Charing Station</b>
+         </h1>
+  <a href="index.html">Home</a>
+  <a href="evcar.html">EV Cars</a>
+  <a href="#chart">Chart</a>
+  <a href="#container4">Contacts</a>
+      </div>
+      </div>
     <div class="container1">
       <div class="right" style="margin-top: auto">
         <div class="date-time">
@@ -39,84 +40,68 @@
           <h3 id="time"></h3>
         </div>
         <div id="amount">
-          <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Me3lFaZkHZ9wXS" async> </script> </form>
+          <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Me3lFaZkHZ9wXS" async> </script> </form>
         </div>
         </div>
       </div>
-      <div id="container2">
+      <!--<div class="container2">
         <div class="img1">
-          <div class="a1">
-          <img src="img/tata.jpg" alt="" class="tata" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
+          <img src="tata.jpg" alt="" class="tata" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
           <div class="tata1">
-            <h3 style="color: white; text-align: center;  font-size: larger;"><b>TATA TIGOR</b></h3>
-            <ul style="color: white;">
-              <li>Battery-26 kWh</li>
-              <li>Rate-Rs. 156</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMiov8wgNPsBu" async> </script> </form>
+            <p style="color: white; text-align: center; font-size: larger;"><b>TATA NEXON</b></p>
           </div>  
-        </div>
-        <div class="a2">
-          <img src="img/mg.jpg" alt="" class="mg" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
+          <img src="mg.jpg" alt="" class="mg" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
           <div class="mg1">
-            <h3 style="color: white; text-align: center;  font-size: larger;"><b>MG ZS</b></h3>
-            <ul style="color: white;">
-              <li>Battery-50.3 kWh</li>
-              <li>Rate-Rs. 302</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMlOxlv5FJkqo" async> </script> </form>
+            <p style="color: white; text-align: center; font-size: larger;"><b>MG ZS</b></p>
           </div>
-        </div>
         </div>
         <div class="img2">
-          <div class="a3">
-          <img src="img/kona.jpg" alt="" class="kona" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
+          <img src="kona.jpg" alt="" class="kona" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
           <div class="kona1">
-            <h3 style="color: white; text-align: center; font-size: larger;"><b>MAHINDRA-XUV400</b></h3>
-            <ul style="color: white;">
-              <li>Battery-34.5 kWh</li>
-              <li>Rate-Rs. 207</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMnu68YnWeNAc" async> </script> </form>
-          </div>
-        </div> 
-        <div class="a4">
-          <img src="img/nexon.jpg" alt="" class="nexon" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
+            <p style="color: white; text-align: center; font-size: larger;"><b>HYUNDAI KONA</b></p>
+          </div> 
+          <img src="nexon.jpg" alt="" class="nexon" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
           <div class="nexon1">
-            <h3 style="color: white; text-align: center; font-size: larger;"><b>TATA NEXON</b></h3>
-            <ul style="color: white;">
-              <li>Battery-30.2 kW</li>
-              <li>Rate-Rs. 182</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMqOCaHhml0ei" async> </script> </form>
+            <p style="color: white; text-align: center; font-size: larger;"><b>TATA NEXON</b></p>
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="bottomnav">
-    <div class="container3">
-       <div id="chart">
-        <h1>CHART</h1>
-        <img src="img/chart.jpeg" alt="" style="height: 300px; width: 500px; margin-left: 150px;">
-        <br><br>
-       </div>
-    </div>
-    <div id="container4">
-      <div class="contact">
-        <h3>CONTACT</h3>
-        <address>Bannari amman institute 
-          of technology,Sathyamagalam</address>
-          <p>8610559369</p>
+      <div class="container3">
+         <div id="chart">
+          <h1>CHART</h1>
+          <img src="img/chart.jpeg" alt="" style="height: 300px; width: 500px; margin-left: 150px;">
+          <br><br>
+         </div>
       </div>
-      <div class="about">
-        <h3>ABOUT US</h3>
-        <p>EV Charging Station which allows the 
-          user to efficiently charge their vehicle 
-          by pre purchasing the energy required 
-          by them which serves in conservation of energy.</p>
+      <div id="container4">
+        <div class="contact">
+          
+          <h3>CONTACT</h3>
+          <div id="phone">
+            <i class="fa fa-map-marker" style="color: white; position: relative; top: 1px; right: 5px; font-size: 25px;" ></i> <address>Bannari amman institute 
+              of technology,Sathyamagalam</address>
+          </div>
+          
+            <div id="phone">
+            <i class="fa fa-phone" style="color: white; position: relative; top: 15px; right: 5px; font-size: 25px;" ></i> <p>8610559369</p>
+          </div>
+          <div id="phone">
+            <i class="fa fa-envelope" style="color: white; position: relative; top: 15px; right: 5px; font-size: 20px;" ></i> <p>optimers.6@gmail.com</p>
+          </div>
+  
+          
+        </div>
+        <div class="about">
+          <h3>ABOUT US</h3>
+          <p>EV Charging Station which allows the 
+            user to efficiently charge their vehicle 
+            by pre purchasing the energy required 
+            by them which serves in conservation of energy.</p>
+        </div>
       </div>
     </div>
-  </div>
     <script src="main.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
