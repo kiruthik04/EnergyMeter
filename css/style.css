@@ -33,7 +33,7 @@
             display: flex;
             justify-content:left;
             height: 60px;
-            background-color: rgba(0,0,0,.5);
+            background-color: rgba(0,0,0,.8);
             border-bottom: 2px solid black;
         }
         .topnav{
@@ -50,18 +50,20 @@
           }
           h1{
             margin-top: 0%;
-            width: 280px;
+            width: 260px;
             padding-left: 20px;
           }
           a{
             height: 5px;
-            width: 80px;
-            font-size: large;
+            width: 60px;
+            font-size: larger;
+            text-align: center;
           }
           a:hover, a:active {
             background-color:white;
             color: black;
             margin-top: 5px;
+            text-align: center;
           }
         .container1{
             /*height: 60vh;*/
@@ -88,8 +90,15 @@
         }
         #container2{
             position: relative;
-            top: 100px;
             height: 140vh;
+        }
+        #chart{
+            position: relative;
+            top: 100px;
+        }
+        #chart1{
+            position: relative;
+            top: 200px;
         }
         .img1{
             display: flex;
@@ -256,6 +265,8 @@
         .contact{
             margin-left: 50px;
             width: 50%;
+            text-align: justify;
+
         }
         .about{
             margin-left: 50px;
