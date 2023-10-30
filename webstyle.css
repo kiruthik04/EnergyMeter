@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&family=Vollkorn:wght@500&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&display=swap');
-/*@import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&family=Poppins:wght@700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&display=swap');
         body{
             background-image: url(img/bg.jpg);
@@ -65,7 +65,7 @@
             overflow: hidden;
             display: flex;
             position: relative;
-            font-family: 'Vollkorn',sans-serif;
+            font-family: 'Poppins',sans-serif;
         }
         .right{
             flex-direction: column;
