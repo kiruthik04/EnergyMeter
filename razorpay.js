@@ -12,12 +12,12 @@ document.getElementById("paymentButton").addEventListener("click", function () {
         window.location.href = 'https://example.com/redirect-page.html';
       },
       prefill: {
-        name: 'John Doe', // Customer name
-        email: 'johndoe@example.com', // Customer email
-        contact: '+1234567890' // Customer phone number
+        name: 'Kiruthik', // Customer name
+        email: 'kiruthicksathy@gmail.com', // Customer email
+        contact: '8610559369' // Customer phone number
       }
     };
     var rzp = new Razorpay(options);
     rzp.open();
   });
-  
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
