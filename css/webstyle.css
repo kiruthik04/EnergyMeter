@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&display=swap');
         body{
-            background-image: url(/img/bg.jpg);
+            background-image: url(/img/bg1.jpeg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -13,11 +13,11 @@
             font-family: 'Outfit',sans-serif;
             margin: 0%;
             padding: 0%;
-            height: 200px;
+            height: 30px;
         }
         .bg{
             background-color: rgba(0,0,0,.3);
-            height: 365px;
+            height: 375px;
         }
         nav{
             height: 40px;
