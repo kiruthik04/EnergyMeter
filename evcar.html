@@ -1,90 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energy Meter Dashboard</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link href="./icon.png" rel="shortcut icon" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <nav>
-      <img
-        src="img/photo.png"
-        alt=""
-        height="30px"
-        width="100px"
-        style="margin-top: 2.5px"
-      />
-    </nav>
-    <div class="head">
-    <div class="topnav">
-      <h1  style=" color: white; font-size: 1.6em;">
-        <b><span style="font-size:1.7em ;">EV</span> Charing Station</b>
-       </h1>
-<a href="index.html">Home</a>
-<a href="#container2">Cars</a>
-<a href="evbike.html">Bikes</a>
-<a href="index.html">Chart</a>
-<a href="index.html">Contacts</a>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV Cars | Next-Gen EV Charging</title>
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link href="./img/icon.png" rel="shortcut icon" type="image/png">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Vehicle Catalog Specific Styles */
+    .catalog-header {
+      text-align: center;
+      padding: 4rem 0 2rem;
+    }
+
+    .vehicle-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .vehicle-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--glass-glow);
+      border-color: rgba(0, 229, 255, 0.3);
+    }
+
+    .vehicle-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .vehicle-info {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vehicle-info h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .vehicle-stats {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .vehicle-stats li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--glass-border);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .vehicle-stats li span {
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .vehicle-action {
+      margin-top: auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <img src="img/custom_logo.png" alt="Energy Meter Logo" style="border-radius: 8px;">
+        <h1><span class="text-gradient">EV</span> Network</h1>
+      </div>
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="evcar.html" class="nav-link active">Cars</a>
+        <a href="evbike.html" class="nav-link">Bikes</a>
+      </div>
     </div>
+  </nav>
+
+  <main class="container">
+    <div class="catalog-header">
+      <h1 class="hero-title">Electric <span class="text-gradient">Cars</span></h1>
+      <p class="hero-subtitle">Select your vehicle model to prepay for an optimal charging cycle.</p>
     </div>
-    <div id="container2">
-        <div class="img1">
-          <div class="a1">
-          <img src="img/tata.jpg" alt="" class="tata" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
-          <div class="tata1">
-            <h3 style="color: white; text-align: center;  font-size: larger;"><b>TATA TIGOR</b></h3>
-            <ul style="color: white;">
-              <li>Battery-26 kWh</li>
-              <li>Rate-Rs. 156</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMnu68YnWeNAc" async> </script> </form>
-            
-          </div>  
-        </div>
-        <div class="a2">
-          <img src="img/mg.jpg" alt="" class="mg" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
-          <div class="mg1">
-            <h3 style="color: white; text-align: center;  font-size: larger;"><b>MG ZS</b></h3>
-            <ul style="color: white;">
-              <li>Battery-50.3 kWh</li>
-              <li>Rate-Rs. 302</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMqOCaHhml0ei" async> </script> </form>
-            
-          </div>
-        </div>
-        </div>
-        <div class="img2">
-          <div class="a3">
-          <img src="img/kona.jpg" alt="" class="kona" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
-          <div class="kona1">
-            <h3 style="color: white; text-align: center; font-size: larger;"><b>MAHINDRA-XUV400</b></h3>
-            <ul style="color: white;">
-              <li>Battery-34.5 kWh</li>
-              <li>Rate-Rs. 207</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMlOxlv5FJkqo" async> </script> </form>
-            
-          </div>
-        </div> 
-        <div class="a4">
-          <img src="img/nexon.jpg" alt="" class="nexon" style="height: 250px; width: 350px; border-radius: 10px 10px 0px 0px;">
-          <div class="nexon1">
-            <h3 style="color: white; text-align: center; font-size: larger;"><b>TATA NEXON</b></h3>
-            <ul style="color: white;">
-              <li>Battery-30.2 kW</li>
-              <li>Rate-Rs. 182</li>
-            </ul>
-            <form style="padding-left: 100px;"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MnMiov8wgNPsBu" async> </script> </form>
-            
+
+    <div class="vehicle-grid">
+
+      <!-- Card 1 -->
+      <div class="vehicle-card">
+        <img src="img/tata.jpg" alt="Tata Tigor" class="vehicle-image">
+        <div class="vehicle-info">
+          <h3>TATA TIGOR</h3>
+          <ul class="vehicle-stats">
+            <li>Battery Capacity <span>26 kWh</span></li>
+            <li>Recharge Rate <span>Rs. 156</span></li>
+          </ul>
+          <div class="vehicle-action">
+            <form>
+              <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_MnMnu68YnWeNAc" async></script>
+            </form>
           </div>
         </div>
       </div>
+
+      <!-- Card 2 -->
+      <div class="vehicle-card">
+        <img src="img/mg.jpg" alt="MG ZS" class="vehicle-image">
+        <div class="vehicle-info">
+          <h3>MG ZS</h3>
+          <ul class="vehicle-stats">
+            <li>Battery Capacity <span>50.3 kWh</span></li>
+            <li>Recharge Rate <span>Rs. 302</span></li>
+          </ul>
+          <div class="vehicle-action">
+            <form>
+              <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_MnMqOCaHhml0ei" async></script>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="vehicle-card">
+        <img src="img/kona.jpg" alt="Mahindra XUV400" class="vehicle-image">
+        <div class="vehicle-info">
+          <h3>MAHINDRA XUV400</h3>
+          <ul class="vehicle-stats">
+            <li>Battery Capacity <span>34.5 kWh</span></li>
+            <li>Recharge Rate <span>Rs. 207</span></li>
+          </ul>
+          <div class="vehicle-action">
+            <form>
+              <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_MnMlOxlv5FJkqo" async></script>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="vehicle-card">
+        <img src="img/nexon.jpg" alt="Tata Nexon" class="vehicle-image">
+        <div class="vehicle-info">
+          <h3>TATA NEXON</h3>
+          <ul class="vehicle-stats">
+            <li>Battery Capacity <span>30.2 kW</span></li>
+            <li>Recharge Rate <span>Rs. 182</span></li>
+          </ul>
+          <div class="vehicle-action">
+            <form>
+              <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_MnMiov8wgNPsBu" async></script>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </div>
-    </body>
-    </html>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3><span class="text-gradient">EV</span> Network</h3>
+        <p>A next-generation EV Charging Station platform that empowers users to efficiently pre-purchase energy,
+          actively supporting conservation and sustainable travel.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Support</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> Bannari Amman Institute of Technology, Sathyamangalam</li>
+          <li><i class="fa-solid fa-phone"></i> +91 8610559369</li>
+          <li><i class="fa-solid fa-envelope"></i> optimers.6@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

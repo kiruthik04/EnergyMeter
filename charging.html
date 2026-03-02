@@ -1,79 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Energy Meter Dashboard</title>
-    <link href="img/icon.png" rel="shortcut icon" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="/css/charging_style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charging Station | Next-Gen EV</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link href="./img/icon.png" rel="shortcut icon" type="image/png">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Charging Specific Styles */
+        .charging-wrapper {
+            min-height: calc(100vh - 160px);
+            /* Account for nav and footer */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .status-title {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 4rem;
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+        }
+
+        /* Modern Battery Animation */
+        .battery-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .battery-head {
+            width: 48px;
+            height: 18px;
+            background: var(--bg-panel);
+            border: 4px solid var(--text-muted);
+            border-bottom: none;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        .battery-body {
+            width: 140px;
+            height: 240px;
+            background: rgba(15, 20, 31, 0.8);
+            backdrop-filter: var(--glass-blur);
+            border: 6px solid var(--text-muted);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Animated Bolt */
+        .fa-bolt {
+            color: var(--text-main);
+            font-size: 70px;
+            z-index: 2;
+            animation: pulse-bolt 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-bolt {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+
+            50% {
+                transform: scale(1.15);
+                filter: drop-shadow(0 0 20px var(--primary));
+                color: var(--primary);
+            }
+
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+        /* Charging Liquid */
+        .charge-level {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, var(--success), var(--primary));
+            animation: charge-up 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            z-index: 1;
+            box-shadow: 0 0 30px var(--primary);
+        }
+
+        /* Add a wave effect to top of liquid */
+        .charge-level::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50% 50% 0 0;
+        }
+
+        @keyframes charge-up {
+            0% {
+                height: 5%;
+                opacity: 0.5;
+                filter: hue-rotate(90deg);
+            }
+
+            50% {
+                height: 50%;
+                opacity: 1;
+                filter: hue-rotate(45deg);
+            }
+
+            100% {
+                height: 100%;
+                opacity: 1;
+                filter: hue-rotate(0deg);
+            }
+        }
+    </style>
 </head>
-<script>
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-      apiKey: "AIzaSyB1bZ9lXxpZ6u68L24WYWPvywLAFfN3684",
-      authDomain: "check1-580b7.firebaseapp.com",
-      databaseURL: "https://check1-580b7-default-rtdb.firebaseio.com",
-      projectId: "check1-580b7",
-      storageBucket: "check1-580b7.appspot.com",
-      messagingSenderId: "484459339788",
-      appId: "1:484459339788:web:05db8ce8171a7388d4ce29"
-  };
 
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-
-  // Get a reference to the Firebase database
-  const database = firebase.database();
-
-  // Get a reference to the button
-  const btn = document.getElementById("btn");
-
-  // Add a click event listener to the button
-  btn.addEventListener("click", () => {
-      // Define the data you want to add to the database (e.g., integer value)
-      const intValue = 0; // Change this to your desired integer value
-
-      // Get a reference to the location where you want to store the data in the database
-      const intDataRef = database.ref("integers");
-
-      // Set the integer value to the database using set()
-      intDataRef.set(intValue)
-          .then(() => {
-              console.log("Integer value saved successfully.");
-          })
-          .catch((error) => {
-              console.error("Error saving integer value:", error);
-          });
-  });
-</script>
 <body>
-    <nav>
-        <img
-            src="/img/photo.png"
-            alt=""
-            height="40px"
-            width="120px"
-            style="margin-top: 2.5px"
-        />
-    </nav>
-    <div class="charging-container">
-        <h1>EV CHARGING STATION</h1>
-        <div class="battery">
-            <div class="battery-head"></div>
-            <div class="battery-body">
-                <i class="fas fa-bolt"></i>
-                <div class="charge"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <img src="img/custom_logo.png" alt="Energy Meter Logo" style="border-radius: 8px;">
+                <h1><span class="text-gradient">EV</span> Network</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Dashboard</a>
+                <a href="evcar.html" class="nav-link">Cars</a>
+                <a href="evbike.html" class="nav-link">Bikes</a>
             </div>
         </div>
-    </div>
-    <div class="stop">
-        <button class="btn">STOP</button>
-    </div>
+    </nav>
 
-    <!-- Firebase SDK and initialization -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+    <main class="container">
+        <div class="charging-wrapper">
+            <h1 class="status-title text-gradient">ACTIVE CHARGING SESSION</h1>
 
-    
+            <div class="battery-container">
+                <div class="battery-head"></div>
+                <div class="battery-body">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div class="charge-level"></div>
+                </div>
+            </div>
+
+            <button class="btn btn-danger btn">TERMINATE CHARGING</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h3><span class="text-gradient">EV</span> Network</h3>
+                <p>A next-generation EV Charging Station platform that empowers users to efficiently pre-purchase
+                    energy, actively supporting conservation and sustainable travel.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Support</h3>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Bannari Amman Institute of Technology, Sathyamangalam
+                    </li>
+                    <li><i class="fa-solid fa-phone"></i> +91 8610559369</li>
+                    <li><i class="fa-solid fa-envelope"></i> optimers.6@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <!-- Main application script must run after firebase libraries load -->
+    <script src="firebase.js"></script>
+
+    <!-- Rebound Event Listener Script -->
+    <script>
+        // Ensure the stop button logic actually triggers
+        document.addEventListener("DOMContentLoaded", () => {
+            const stopBtn = document.querySelector(".btn-danger");
+            if (stopBtn) {
+                stopBtn.addEventListener("click", () => {
+                    const ans = prompt("To stop please enter confirmation code:");
+                    if (ans === "1234") { // Added simple validation since previous script had a logic gap
+                        if (typeof firebase !== 'undefined' && firebase.database) {
+                            firebase.database().ref("ENERGYMETER").update({ Condition: 0 })
+                                .then(() => alert("Charging Stopped Successfully"))
+                                .catch(err => alert("Error stopping charge: " + err.message));
+                        } else {
+                            alert("Firebase not initialized.");
+                        }
+                    } else {
+                        alert("Invalid confirmation code.");
+                    }
+                });
+            }
+        });
+    </script>
+
 </body>
+
 </html>

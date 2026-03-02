@@ -1,14 +1,18 @@
+import os
+from dotenv import load_dotenv
 import razorpay
 from github import Github
 
+load_dotenv()
+
 # Razorpay API credentials
-razorpay_key_id = 'rzp_test_ET6oqw4dDdF8P3'
-razorpay_key_secret = 'QbSzq5oYmlfR081gUGf38zv0'
+razorpay_key_id = os.getenv('RAZORPAY_KEY_ID')
+razorpay_key_secret = os.getenv('RAZORPAY_KEY_SECRET')
 
 # GitHub credentials
-github_username = 'kiruthik04'
-github_repo = 'EnergyMeter'
-github_token = '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'
+github_username = os.getenv('GITHUB_USERNAME')
+github_repo = os.getenv('GITHUB_REPO')
+github_token = os.getenv('GITHUB_TOKEN')
 
 # Initialize Razorpay client
 client = razorpay.Client(auth=(razorpay_key_id, razorpay_key_secret))

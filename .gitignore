@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Python environment
+myenv/
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Mac OS
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

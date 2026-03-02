@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energy Meter Dashboard</title>
-    <link rel="stylesheet" href="/css/webstyle.css" />
-    <link href="./img/icon.png" rel="shortcut icon" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    
-    <div class="bg">
 
-    <nav>
-      <img
-        src="img/photo.png"
-        alt=""
-        height="30px"
-        width="100px"
-        style="margin-top: 2.5px"
-      />
-    </nav>
-    <div class="head">
-      <div class="topnav">
-        <h1  style=" color: white; font-size: 1.6em;">
-          <b><span style="font-size:1.7em ;">EV</span> Charing Station</b>
-         </h1>
-  <a href="index.html">Home</a>
-  <a href="evcar.html">Cars</a>
-  <a href="evbike.html">Bikes</a>
-  <a href="#chart">Chart</a>
-  <a href="#container4">Contacts</a>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Meter | Next-Gen EV Charging</title>
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link href="./img/icon.png" rel="shortcut icon" type="image/png">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <img src="img/custom_logo.png" alt="Energy Meter Logo" style="border-radius: 8px;">
+        <h1><span class="text-gradient">EV</span> Network</h1>
       </div>
-      </div>
-    <div class="container1">
-      <div class="right" style="margin-top: auto">
-        <div class="date-time">
-          <h3 id="date"></h3>
-          <h3 id="time"></h3>
-        </div>
-        <div id="amount">
-          <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Me3lFaZkHZ9wXS" async> </script> </form>
-        </div>
-        </div>
-      </div>
-    <div class="bottomnav">
-      <div class="container3">
-         <div id="chart">
-          <h1>CHART</h1>
-          <img src="img/chart.jpeg" alt="" style="height: 300px; width: 500px; margin-left: 150px;">
-          <br><br>
-         </div>
-         <div id="chart1">
-          <img src="img/chart1.png" alt="" style="height: 300px; width: 500px; margin-left: 150px;">
-          <br><br>
-         </div>
-      </div>
-      <div id="container4">
-        <div class="contact">
-          
-          <h3>CONTACT</h3>
-          <div id="phone">
-            <i class="fa fa-map-marker" style="color: white; position: relative; top: 1px; right: 5px; font-size: 25px;" ></i> <address>Bannari amman institute 
-              of technology,Sathyamagalam</address>
-          </div>
-          
-            <div id="phone">
-            <i class="fa fa-phone" style="color: white; position: relative; top: 15px; right: 5px; font-size: 25px;" ></i> <p>8610559369</p>
-          </div>
-          <div id="phone">
-            <i class="fa fa-envelope" style="color: white; position: relative; top: 15px; right: 5px; font-size: 20px;" ></i> <p>optimers.6@gmail.com</p>
-          </div>
-        </div>
-        <div class="about">
-          <h3>ABOUT US</h3>
-          <p>EV Charging Station which allows the 
-            user to efficiently charge their vehicle 
-            by pre purchasing the energy required 
-            by them which serves in conservation of energy.</p>
-        </div>
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link active">Dashboard</a>
+        <a href="evcar.html" class="nav-link">Cars</a>
+        <a href="evbike.html" class="nav-link">Bikes</a>
       </div>
     </div>
-    <script src="main.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </nav>
 
-  </body>
+  <!-- Hero Section -->
+  <header class="hero container">
+    <h1 class="hero-title">Intelligent Energy <span class="text-gradient">Metering</span></h1>
+    <p class="hero-subtitle">Pre-purchase your charging session entirely online. Connect to any supported EV charging
+      point instantly.</p>
+
+    <div class="glass-panel" style="display: inline-block; padding: 2rem 4rem; margin-bottom: 2rem;">
+      <h3 id="date" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 0.5rem;"></h3>
+      <h2 id="time" style="font-size: 2.5rem; letter-spacing: 2px;" class="text-gradient"></h2>
+    </div>
+
+    <div>
+      <h4 style="margin-bottom: 1rem; color: var(--text-muted);">Quick Recharge Setup</h4>
+      <form style="display: inline-block;">
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Me3lFaZkHZ9wXS"
+          async></script>
+      </form>
+    </div>
+  </header>
+
+  <!-- Main Content Grid -->
+  <main class="container">
+    <div class="dashboard-grid">
+
+      <!-- Chart Card 1 -->
+      <div class="glass-panel chart-card">
+        <h2>Charging Trends <i class="fa-solid fa-chart-line"></i></h2>
+        <img src="img/chart.jpeg" alt="Charging Trends Chart" class="chart-image">
+      </div>
+
+      <!-- Chart Card 2 -->
+      <div class="glass-panel chart-card">
+        <h2>Energy Usage Analytics <i class="fa-solid fa-bolt"></i></h2>
+        <img src="img/chart1.png" alt="Energy Usage Chart" class="chart-image">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3><span class="text-gradient">EV</span> Network</h3>
+        <p>A next-generation EV Charging Station platform that empowers users to efficiently pre-purchase energy,
+          actively supporting conservation and sustainable travel.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Support</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> Bannari Amman Institute of Technology, Sathyamangalam</li>
+          <li><i class="fa-solid fa-phone"></i> +91 8610559369</li>
+          <li><i class="fa-solid fa-envelope"></i> optimers.6@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+
 </html>

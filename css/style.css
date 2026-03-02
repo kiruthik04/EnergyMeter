@@ -1,285 +1,205 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');*/
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&family=Vollkorn:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&display=swap');
-  /*@import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&family=Poppins:wght@700&display=swap');*/
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Onest:wght@700&family=Outfit&family=Poppins:wght@700&display=swap');
+:root {
+    --primary-color: #0d1117;
+    --accent-color: #00ff88;
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --nav-bg: rgba(0, 0, 0, 0.85);
+}
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/img/bg1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+/* Top Mini Nav */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--primary-color);
+}
 
-        body{
-            /*background-image: url(img/bg.jpg);*/
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: fit-content;
-            font-family: 'Outfit',sans-serif;
-            margin: 0%;
-            padding: 0%;
-            height: 250px;
-            background-color: whitesmoke;
-        }
-        .bg{
-            background-color: rgba(0,0,0,.3);
-            height: 390px;
-        }
-        nav{
-            height: 40px;
-            background-color:black;
-            
-        }
-        .head{
-            display: flex;
-            justify-content:left;
-            height: 60px;
-            background-color: rgba(0,0,0,.8);
-            border-bottom: 2px solid black;
-        }
-        .topnav{
-            display: flex; 
-           
-        }
-        a:link, a:visited {
-            /*background-color: rgba(0,0,0,0.8);*/
-            color: white;
-            /*border: 2px solid rgba(0,0,0,10);*/
-            padding: 25px 20px;
-            text-align: center;
-            text-decoration: none; 
-          }
-          h1{
-            margin-top: 0%;
-            width: 260px;
-            padding-left: 20px;
-          }
-          a{
-            height: 5px;
-            width: 60px;
-            font-size: larger;
-            text-align: center;
-          }
-          a:hover, a:active {
-            background-color:white;
-            color: black;
-            margin-top: 5px;
-            text-align: center;
-          }
-        .container1{
-            /*height: 60vh;*/
-            margin-top: 5%;
-            padding: 0%;
-            overflow: hidden;
-            display: flex;
-            position: relative;
-            font-family: 'Vollkorn',sans-serif;
-        }
-        .right{
-            flex-direction: column;
-            justify-content: right;
-            margin-left: 15%;
-            
-        }
-        .date-time{
-            color: #fff;
-            font-size: 1.5em;
-        }
-       
-        button{
-            background-color: #fff;
-        }
-        #container2{
-            position: relative;
-            height: 140vh;
-        }
-        #chart{
-            position: relative;
-            top: 100px;
-        }
-        #chart1{
-            position: relative;
-            top: 200px;
-        }
-        .img1{
-            display: flex;
-            align-items: center;
-        }
-        .img2{
-            display: flex;
-            align-items: center;
-        }
-        .mg{
-            position: relative;
-            left: 50px;
-        }
-        .mg1{
-            height: 50px;
-            width: 350px;
-            background-color: rgba(0,0,0,.5);
-            border-radius: 10px 10px 0px 0px;
-            border-bottom: 1px solid#000000;
-            position: absolute;
-            top: 200px;
-            left: 400px;
-            transition-duration: 0.5s;
-        }
-        .a2:hover{
-            cursor: pointer;   
-        }
-        .a2:hover .mg{
-            -webkit-filter: blur(2px);
-            filter: blur(2px);
-        }
-        .a2:hover .mg1{
-            height: 170px;
-            background-color: rgba(0,0,0,.5);
-            visibility: visible;
-            top: 80px;
-            animation-fill-mode: forwards;
-        }
-        .a2:hover form{
-            visibility: visible;
-        }
-        .a2:hover ul{
-            visibility: visible;
-        }
-        .tata{
-            position: relative;
-            left: 40px;
-        }
-        .a1:hover{
-            cursor: pointer;   
-        }
-        .a1:hover .tata{
-            -webkit-filter: blur(2px);
-            filter: blur(2px);
-        }
-        .a1:hover .tata1{
-            height: 170px;
-            background-color: rgba(0,0,0,.5);
-            visibility: visible;
-            top: 80px;
-            animation-fill-mode: forwards;
-        }
-        .a1:hover form{
-            visibility: visible;
-        }
-        .a1:hover ul{
-            visibility: visible;
-        }
-        form{
-            visibility: hidden;
-        }
-        ul{
-            visibility: hidden;
-        }
-        .tata1{
-            height: 50px;
-            width: 350px;
-            background-color: rgba(0,0,0,.5);
-            border-radius: 10px 10px 0px 0px;
-            border-bottom: 1px solid #000000;
-            position: absolute;
-            top: 200px;
-            left: 40px;
-            transition-duration: 0.5s;
-        }
-        .kona{
-            position: relative;
-            top: 50px;
-            left: 40px;
-        }
-        .a3:hover{
-            cursor: pointer;   
-        }
-        .a3:hover .kona{
-            -webkit-filter: blur(2px);
-            filter: blur(2px);
-        }
-        .a3:hover .kona1{
-            height: 170px;
-            background-color: rgba(0,0,0,.5);
-            visibility: visible;
-            top: 380px;
-            animation-fill-mode: forwards;
-        }
-        .a3:hover form{
-            visibility: visible;
-        }
-        .a3:hover ul{
-            visibility: visible;
-        }
-        .kona1{
-            height: 50px;
-            width: 350px;
-            background-color: rgba(0,0,0,.5);
-            border-radius: 10px 10px 0px 0px;
-            border-bottom: 1px solid #000000;
-            position: absolute;
-            top: 505px;
-            left: 40px;
-            transition-duration: 0.5s;
-        }
-        .nexon{
-            position: relative;
-            top: 50px;
-            left: 50px;
-        }
-        .a4:hover{
-            cursor: pointer;   
-        }
-        .a4:hover .nexon{
-            -webkit-filter: blur(2px);
-            filter: blur(2px);
-        }
-        .a4:hover .nexon1{
-            height: 170px;
-            background-color: rgba(0,0,0,.5);
-            visibility: visible;
-            top: 380px;
-            animation-fill-mode: forwards;
-        }
-        .a4:hover form{
-            visibility: visible;
-        }
-        .a4:hover ul{
-            visibility: visible;
-        }
-        .nexon1{
-            height: 50px;
-            width: 350px;
-            background-color: rgba(0,0,0,.5);
-            border-radius: 10px 10px 0px 0px;
-            border-bottom: 1px solid #000000;
-            position: absolute;
-            top: 505px;
-            left: 400px;
-            transition-duration: 0.5s;
-        }
-        #container4{
-            background-color: black;
-            height: 220px;
-            display: flex;
-            color: white;
-        }
-        .contact{
-            margin-left: 50px;
-            width: 50%;
-            text-align: justify;
+/* Main Navigation Header */
+.head {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        }
-        .about{
-            margin-left: 50px;
-            text-align: justify;
-            margin-right: 80px;
-            width: 50%;
-        }
-        .bottomnav{
-            position: absolute;
-            top: 1050px;
-            font-family: 'Vollkorn',sans-serif;
-        }
-        #phone{
-           display: flex;
-        }
-        
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.topnav h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem 0;
+    color: var(--text-primary);
+}
+
+.topnav h1 span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.topnav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.topnav a:hover {
+    color: var(--accent-color);
+    background: var(--glass-bg);
+}
+
+/* Vehicle Catalog Grid Wrapper */
+#container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* Individual Vehicle Card */
+.vehicle-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.vehicle-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-img {
+    filter: brightness(0.7) blur(2px);
+}
+
+/* Card Information Overlay */
+.vehicle-info {
+    position: absolute;
+    bottom: -100px;
+    /* Hidden initially */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    transition: bottom 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--glass-border);
+}
+
+.vehicle-card:hover .vehicle-info {
+    bottom: 0;
+    /* Slide up on hover */
+}
+
+.vehicle-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.vehicle-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.vehicle-info ul li {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.vehicle-info form {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #container2 {
+        padding: 1rem;
+    }
+
+    /* On mobile, keep info always visible as hover doesn't work well */
+    .vehicle-info {
+        position: relative;
+        bottom: 0;
+        background: var(--glass-bg);
+        border-top: none;
+    }
+
+    .vehicle-card:hover .vehicle-img {
+        filter: none;
+    }
+}
