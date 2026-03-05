@@ -113,15 +113,6 @@ The `charging.html` page listens to the `ENERGYMETER` node in Firebase. To **sto
 
 ---
 
-## 📍 Contact & Support
-
-| Field       | Details                                         |
-|-------------|-------------------------------------------------|
-| Institution | Bannari Amman Institute of Technology, Sathyamangalam |
-| Phone       | +91 8610559369                                  |
-| Email       | optimers.6@gmail.com                            |
-
----
 
 ## 📄 License
 
